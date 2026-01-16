@@ -1,2 +1,207 @@
-<html>Hello its working...!</html>
-<a href="https://business.facebook.com/messaging/whatsapp/onboard/?app_id=1402222971361782&config_id=24908923008782567&extras=%7B%22featureType%22%3A%22whatsapp_business_app_onboarding%22%2C%22sessionInfoVersion%22%3A%223%22%2C%22version%22%3A%22v3%22%7D"><button>Connect</button></a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>L10 AI Labs - AI-Powered WhatsApp Automation</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#22c55e',
+            'primary-dark': '#16a34a',
+            dark: '#0f172a',
+            'dark-light': '#1e293b',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+  <style>
+    .gradient-text {
+      background: linear-gradient(135deg, #22c55e 0%, #86efac 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .gradient-bg {
+      background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+    }
+    .card-hover {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(34, 197, 94, 0.15);
+    }
+  </style>
+</head>
+<body class="font-sans bg-dark text-gray-100 antialiased">
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-dark/90 backdrop-blur-md border-b border-gray-800">
+    <div class="max-w-6xl mx-auto px-6 py-4">
+      <div class="flex items-center justify-between">
+        <a href="index.html" class="flex items-center gap-3">
+          <img src="public/logo.png" alt="L10 AI Labs" class="h-10 w-auto">
+          <span class="font-semibold text-xl">L10 AI Labs</span>
+        </a>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="index.html" class="text-primary font-medium">Home</a>
+          <a href="privacypolicy.html" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
+          <a href="termsandcondition.html" class="text-gray-400 hover:text-white transition-colors">Terms & Conditions</a>
+        </div>
+        <a href="mailto:support@l10ailabs.com" class="hidden md:inline-flex gradient-bg text-white px-5 py-2.5 rounded-lg font-medium hover:opacity-90 transition-opacity">
+          Contact Us
+        </a>
+        <!-- Mobile menu button -->
+        <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="md:hidden text-gray-400 hover:text-white">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 border-t border-gray-800 pt-4">
+        <div class="flex flex-col gap-4">
+          <a href="index.html" class="text-primary font-medium">Home</a>
+          <a href="privacypolicy.html" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
+          <a href="termsandcondition.html" class="text-gray-400 hover:text-white transition-colors">Terms & Conditions</a>
+          <a href="mailto:support@l10ailabs.com" class="gradient-bg text-white px-5 py-2.5 rounded-lg font-medium text-center">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="pt-32 pb-20 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center max-w-3xl mx-auto">
+        <div class="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-4 py-2 mb-6">
+          <span class="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
+          <span class="text-primary text-sm font-medium">AI-Powered Automation</span>
+        </div>
+        <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight text-balance">
+          Transform Your Business with <span class="gradient-text">WhatsApp AI</span>
+        </h1>
+        <p class="text-xl text-gray-400 mb-10 leading-relaxed text-pretty">
+          L10 AI Labs provides cutting-edge AI-powered automation tools that help businesses manage customer conversations on WhatsApp seamlessly and efficiently.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="mailto:support@l10ailabs.com" class="gradient-bg text-white px-8 py-4 rounded-xl font-semibold text-lg hover:opacity-90 transition-opacity">
+            Get Started Today
+          </a>
+          <a href="#features" class="bg-dark-light border border-gray-700 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-800 transition-colors">
+            Learn More
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="py-20 px-6 bg-dark-light">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Why Choose L10 AI Labs?</h2>
+        <p class="text-gray-400 text-lg max-w-2xl mx-auto">Powerful features designed to streamline your business communication</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Feature 1 -->
+        <div class="bg-dark rounded-2xl p-8 border border-gray-800 card-hover">
+          <div class="w-14 h-14 gradient-bg rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-3">WhatsApp Automation</h3>
+          <p class="text-gray-400 leading-relaxed">Automate customer conversations with intelligent AI-powered responses and message templates.</p>
+        </div>
+        <!-- Feature 2 -->
+        <div class="bg-dark rounded-2xl p-8 border border-gray-800 card-hover">
+          <div class="w-14 h-14 gradient-bg rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-3">Seamless Integration</h3>
+          <p class="text-gray-400 leading-relaxed">Easy integration with Meta's WhatsApp Business Platform and your existing business tools.</p>
+        </div>
+        <!-- Feature 3 -->
+        <div class="bg-dark rounded-2xl p-8 border border-gray-800 card-hover">
+          <div class="w-14 h-14 gradient-bg rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-3">Enterprise Security</h3>
+          <p class="text-gray-400 leading-relaxed">Industry-standard security measures including encrypted communication and secure API access.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="py-20 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="gradient-bg rounded-3xl p-12 md:p-16">
+        <div class="grid md:grid-cols-3 gap-12 text-center">
+          <div>
+            <div class="text-4xl md:text-5xl font-bold text-white mb-2">24/7</div>
+            <div class="text-green-100">Automated Support</div>
+          </div>
+          <div>
+            <div class="text-4xl md:text-5xl font-bold text-white mb-2">99.9%</div>
+            <div class="text-green-100">Uptime Guarantee</div>
+          </div>
+          <div>
+            <div class="text-4xl md:text-5xl font-bold text-white mb-2">∞</div>
+            <div class="text-green-100">Messages Handled</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 px-6 bg-dark-light">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
+      <p class="text-gray-400 text-lg mb-10">Get in touch with us today and discover how L10 AI Labs can revolutionize your customer communication.</p>
+      <a href="mailto:support@l10ailabs.com" class="inline-flex items-center gap-2 gradient-bg text-white px-8 py-4 rounded-xl font-semibold text-lg hover:opacity-90 transition-opacity">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+        </svg>
+        support@l10ailabs.com
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-12 px-6 border-t border-gray-800">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-3">
+          <img src="public/logo.png" alt="L10 AI Labs" class="h-8 w-auto">
+          <span class="font-semibold">L10 AI Labs</span>
+        </div>
+        <div class="flex flex-wrap items-center justify-center gap-6 text-sm text-gray-400">
+          <a href="privacypolicy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+          <a href="termsandcondition.html" class="hover:text-white transition-colors">Terms & Conditions</a>
+          <a href="mailto:support@l10ailabs.com" class="hover:text-white transition-colors">Contact</a>
+        </div>
+        <div class="text-sm text-gray-500">
+          © 2026 L10 AI Labs. All rights reserved.
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
