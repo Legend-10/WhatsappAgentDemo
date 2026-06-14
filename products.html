@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura - Products</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        zinc: { 950: '#09090b' }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-zinc-50 text-zinc-900 min-h-screen flex flex-col">
+    <!-- Navbar -->
+    <header class="sticky top-0 z-40 w-full bg-white/80 backdrop-blur-md border-b border-zinc-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-8">
+                <a href="index.html" class="font-bold text-xl tracking-tight">AURA</a>
+                <nav class="hidden md:flex gap-6">
+                    <a href="products.html" class="text-sm font-bold text-zinc-900">Products</a>
+                    <a href="#" class="text-sm font-medium text-zinc-600 hover:text-zinc-900">New Arrivals</a>
+                    <a href="#" class="text-sm font-medium text-zinc-600 hover:text-zinc-900">About</a>
+                </nav>
+            </div>
+            <div class="flex items-center gap-4">
+                <button class="p-2 text-zinc-600 hover:text-zinc-900"><i data-lucide="search" class="w-5 h-5"></i></button>
+                <a href="#" class="p-2 text-zinc-600 hover:text-zinc-900 relative">
+                    <i data-lucide="shopping-bag" class="w-5 h-5"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 w-full">
+        <h1 class="text-3xl font-bold tracking-tight mb-8">All Products</h1>
+        
+        <div class="flex gap-8">
+            <!-- Sidebar -->
+            <div class="w-64 hidden lg:block flex-shrink-0">
+                <h3 class="font-semibold mb-4">Categories</h3>
+                <ul class="space-y-3 text-sm text-zinc-600">
+                    <li><a href="#" class="text-zinc-900 font-medium">All Audio</a></li>
+                    <li><a href="#" class="hover:text-zinc-900">Headphones</a></li>
+                    <li><a href="#" class="hover:text-zinc-900">Earbuds</a></li>
+                    <li><a href="#" class="hover:text-zinc-900">Speakers</a></li>
+                    <li><a href="#" class="hover:text-zinc-900">Accessories</a></li>
+                </ul>
+            </div>
+
+            <!-- Grid -->
+            <div class="flex-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product 1 -->
+                <a href="product-detail.html?id=1" class="group block">
+                    <div class="aspect-square bg-zinc-100 rounded-2xl mb-4 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&q=80" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <h3 class="font-semibold text-zinc-900">Aura Pro Wireless</h3>
+                    <p class="text-zinc-500 text-sm mb-1">Noise Cancelling Headphones</p>
+                    <p class="font-medium text-zinc-900">₹24,999</p>
+                </a>
+                <!-- Product 2 -->
+                <a href="product-detail.html?id=2" class="group block">
+                    <div class="aspect-square bg-zinc-100 rounded-2xl mb-4 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&q=80" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <h3 class="font-semibold text-zinc-900">Minimalist Smartwatch</h3>
+                    <p class="text-zinc-500 text-sm mb-1">Titanium Edition</p>
+                    <p class="font-medium text-zinc-900">₹19,999</p>
+                </a>
+                <!-- Product 3 -->
+                <a href="product-detail.html?id=3" class="group block">
+                    <div class="aspect-square bg-zinc-100 rounded-2xl mb-4 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1595225476474-87563907a212?w=600&q=80" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <h3 class="font-semibold text-zinc-900">Mechanical Keyboard</h3>
+                    <p class="text-zinc-500 text-sm mb-1">Wireless & Tactile</p>
+                    <p class="font-medium text-zinc-900">₹14,999</p>
+                </a>
+                <!-- Product 4 -->
+                <a href="product-detail.html?id=4" class="group block">
+                    <div class="aspect-square bg-zinc-100 rounded-2xl mb-4 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1505843490538-5133c6c7d0e1?w=600&q=80" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <h3 class="font-semibold text-zinc-900">Ergonomic Desk Chair</h3>
+                    <p class="text-zinc-500 text-sm mb-1">Premium Mesh</p>
+                    <p class="font-medium text-zinc-900">₹29,999</p>
+                </a>
+                <!-- Product 5 -->
+                <a href="product-detail.html?id=5" class="group block">
+                    <div class="aspect-square bg-zinc-100 rounded-2xl mb-4 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?w=600&q=80" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <h3 class="font-semibold text-zinc-900">True Wireless Earbuds</h3>
+                    <p class="text-zinc-500 text-sm mb-1">Active Noise Cancellation</p>
+                    <p class="font-medium text-zinc-900">₹9,999</p>
+                </a>
+                <!-- Product 6 -->
+                <a href="product-detail.html?id=6" class="group block">
+                    <div class="aspect-square bg-zinc-100 rounded-2xl mb-4 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1600080972464-8e5f35f63d08?w=600&q=80" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <h3 class="font-semibold text-zinc-900">Smart Home Hub</h3>
+                    <p class="text-zinc-500 text-sm mb-1">Voice Controlled</p>
+                    <p class="font-medium text-zinc-900">₹12,499</p>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-zinc-950 text-zinc-400 py-12 mt-12 border-t border-zinc-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+            <span class="text-white font-bold tracking-tight">AURA</span>
+            <p class="text-xs">VisitX SDK Demo Site</p>
+        </div>
+    </footer>
+
+    <!-- VisitX SDK Injector -->
+    <script>
+        lucide.createIcons();
+        
+        // Dynamically inject the VisitX SDK
+        const siteKey = localStorage.getItem('vx_test_site_key') || 'e97e03fc5b2283243d8f734f7638e354';
+        const baseUrl = localStorage.getItem('vx_test_base_url') || window.location.origin;
+        
+        const script = document.createElement('script');
+        script.src = baseUrl + '/api/visitx/sdk';
+        script.setAttribute('data-site', siteKey);
+        script.async = true;
+        document.head.appendChild(script);
+    </script>
+</body>
+</html>

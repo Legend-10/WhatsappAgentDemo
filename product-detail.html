@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail - Aura</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        zinc: { 950: '#09090b' }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-zinc-50 text-zinc-900 min-h-screen flex flex-col">
+    <!-- Navbar -->
+    <header class="sticky top-0 z-40 w-full bg-white/80 backdrop-blur-md border-b border-zinc-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-8">
+                <a href="index.html" class="font-bold text-xl tracking-tight">AURA</a>
+                <nav class="hidden md:flex gap-6">
+                    <a href="products.html" class="text-sm font-medium text-zinc-600 hover:text-zinc-900">Products</a>
+                    <a href="#" class="text-sm font-medium text-zinc-600 hover:text-zinc-900">New Arrivals</a>
+                    <a href="#" class="text-sm font-medium text-zinc-600 hover:text-zinc-900">About</a>
+                </nav>
+            </div>
+            <div class="flex items-center gap-4">
+                <button class="p-2 text-zinc-600 hover:text-zinc-900"><i data-lucide="search" class="w-5 h-5"></i></button>
+                <a href="#" class="p-2 text-zinc-600 hover:text-zinc-900 relative">
+                    <i data-lucide="shopping-bag" class="w-5 h-5"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Product Detail -->
+    <main class="flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 w-full">
+        <!-- Breadcrumbs -->
+        <nav class="flex text-sm text-zinc-500 mb-8 gap-2">
+            <a href="index.html" class="hover:text-zinc-900">Home</a>
+            <span>/</span>
+            <a href="products.html" class="hover:text-zinc-900">Products</a>
+            <span>/</span>
+            <span class="text-zinc-900 font-medium" id="breadcrumb-name">Aura Pro Wireless</span>
+        </nav>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
+            <!-- Images -->
+            <div class="space-y-4">
+                <div class="aspect-square bg-zinc-100 rounded-2xl overflow-hidden">
+                    <img id="main-image" src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=1000&q=80" alt="Product" class="w-full h-full object-cover">
+                </div>
+                <div class="grid grid-cols-4 gap-4">
+                    <button class="aspect-square rounded-xl bg-zinc-100 overflow-hidden ring-2 ring-zinc-900">
+                        <img id="thumb-1" src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=200&q=80" class="w-full h-full object-cover">
+                    </button>
+                    <!-- Thumbnails placeholders -->
+                    <div class="aspect-square rounded-xl bg-zinc-100"></div>
+                    <div class="aspect-square rounded-xl bg-zinc-100"></div>
+                </div>
+            </div>
+
+            <!-- Info -->
+            <div class="flex flex-col">
+                <h1 id="product-name" class="text-3xl lg:text-4xl font-bold tracking-tight mb-2">Aura Pro Wireless</h1>
+                <p id="product-price" class="text-2xl font-medium text-zinc-900 mb-6">₹24,999</p>
+
+                <div class="space-y-6 flex-1">
+                    <div>
+                        <h4 class="font-medium mb-2">Color</h4>
+                        <div class="flex gap-3">
+                            <button class="w-8 h-8 rounded-full bg-zinc-900 ring-2 ring-offset-2 ring-zinc-900"></button>
+                            <button class="w-8 h-8 rounded-full bg-zinc-300 border border-zinc-400"></button>
+                            <button class="w-8 h-8 rounded-full bg-blue-900 border border-zinc-400"></button>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="font-medium mb-2">Description</h4>
+                        <p class="text-zinc-600 text-sm leading-relaxed">Experience industry-leading noise cancellation and premium audio quality. Designed for all-day comfort with memory foam ear cushions and up to 30 hours of battery life on a single charge.</p>
+                    </div>
+
+                    <ul class="text-sm text-zinc-600 space-y-2 list-disc pl-4">
+                        <li>Active Noise Cancellation</li>
+                        <li>High-Resolution Audio</li>
+                        <li>30-hour battery life</li>
+                        <li>Bluetooth 5.2</li>
+                    </ul>
+                </div>
+
+                <!-- Actions -->
+                <div class="mt-8 space-y-4">
+                    <button id="add-to-cart-btn" data-vx-track class="w-full bg-zinc-900 text-white font-semibold py-4 rounded-xl hover:bg-zinc-800 transition-colors flex justify-center items-center gap-2">
+                        <i data-lucide="shopping-cart" class="w-5 h-5"></i>
+                        Add to Cart
+                    </button>
+                    <button class="w-full bg-white text-zinc-900 font-semibold py-4 rounded-xl border border-zinc-200 hover:bg-zinc-50 transition-colors">
+                        Buy it now
+                    </button>
+                </div>
+                
+                <div class="mt-8 pt-8 border-t border-zinc-200 text-sm text-zinc-500 flex gap-6">
+                    <span class="flex items-center gap-2"><i data-lucide="truck" class="w-4 h-4"></i> Free Shipping</span>
+                    <span class="flex items-center gap-2"><i data-lucide="rotate-ccw" class="w-4 h-4"></i> 30-Day Returns</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-zinc-950 text-zinc-400 py-12 mt-12 border-t border-zinc-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+            <span class="text-white font-bold tracking-tight">AURA</span>
+            <p class="text-xs">VisitX SDK Demo Site</p>
+        </div>
+    </footer>
+
+    <!-- VisitX SDK Injector -->
+    <script>
+        lucide.createIcons();
+        
+        // Dynamically inject the VisitX SDK
+        const siteKey = localStorage.getItem('vx_test_site_key') || 'e97e03fc5b2283243d8f734f7638e354';
+        const baseUrl = localStorage.getItem('vx_test_base_url') || window.location.origin;
+        
+        const script = document.createElement('script');
+        script.src = baseUrl + '/api/visitx/sdk';
+        script.setAttribute('data-site', siteKey);
+        script.async = true;
+        document.head.appendChild(script);
+
+        // Very basic mock database to populate the page based on ?id= query param
+        const PRODUCTS = {
+            "1": { name: "Aura Pro Wireless", price: "₹24,999", img: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=1000&q=80" },
+            "2": { name: "Minimalist Smartwatch", price: "₹19,999", img: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=1000&q=80" },
+            "3": { name: "Mechanical Keyboard", price: "₹14,999", img: "https://images.unsplash.com/photo-1595225476474-87563907a212?w=1000&q=80" },
+            "4": { name: "Ergonomic Desk Chair", price: "₹29,999", img: "https://images.unsplash.com/photo-1505843490538-5133c6c7d0e1?w=1000&q=80" }
+        };
+
+        const params = new URLSearchParams(window.location.search);
+        const id = params.get('id');
+        const product = PRODUCTS[id];
+
+        if (product) {
+            document.title = product.name + " - Aura";
+            document.getElementById('breadcrumb-name').textContent = product.name;
+            document.getElementById('product-name').textContent = product.name;
+            document.getElementById('product-price').textContent = product.price;
+            document.getElementById('main-image').src = product.img;
+            document.getElementById('thumb-1').src = product.img;
+        }
+
+        // Setup custom event tracking for the Add to Cart button
+        document.getElementById('add-to-cart-btn').addEventListener('click', function() {
+            // Give visual feedback
+            const btn = this;
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<i data-lucide="check" class="w-5 h-5"></i> Added to Cart';
+            lucide.createIcons();
+            
+            // Send VisitX Track Event manually in addition to the data-vx-track attribute
+            if (window.VisitX) {
+                window.VisitX.track('add_to_cart', {
+                    product_id: id || "1",
+                    product_name: product ? product.name : "Aura Pro Wireless",
+                    price: product ? product.price : "₹24,999",
+                    currency: 'INR'
+                });
+                console.log("VisitX: add_to_cart event tracked");
+            }
+
+            setTimeout(() => {
+                btn.innerHTML = originalText;
+                lucide.createIcons();
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
